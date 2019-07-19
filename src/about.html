@@ -11,50 +11,75 @@
   <div id="wrapper">
 
     <header>
-      <div id="secondary-nav" class="row">
-        <div id="en-masse" class="sprite logo col-xs-1"></div>
-        <div class="col-xs-10"></div>
-        <a id="my-account" class="col-xs-1" title="lol" href="https://thecatapi.com/" target="_blank">
-          <h6>My Account</h6>
-        </a>
+      <div id="secondary-nav">
+        <div class="container row middle-xs">
+          <div class="logo col-xs-1">
+            <div id="en-masse" class="sprite"></div>
+          </div>
+          <div class="col-xs-10"></div>
+          <a id="my-account" class="col-xs-1" title="lol" href="https://thecatapi.com/" target="_blank">
+            <h6>My Account</h6>
+          </a>
+        </div>
       </div>
-      <div id="primary-nav" class="row center-xs">
-        <img id="tera" class="col-xs-2 col-xs-offset-1" src="images/tera-logo.png" alt="Tera" />
-        <nav class="col-xs-4">
-          <a id="gameplay" class="anchor" title="Gameplay">GAMEPLAY</a>
-          <a id="races" class="anchor" title="Races">RACES</a>
-        </nav>
-        <a id="play-now" class="col-xs-2 button" title="Play Now" href="http://tera.enmasse.com">PLAY NOW</a>
+      <div id="primary-nav">
+        <div class="container row middle-xs">
+          <div class="col-xs-2 col-xs-offset-1">
+            <img id="tera" class="" src="images/tera-logo.png" alt="Tera" />
+          </div>
+          <nav class="col-xs-6">
+            <a id="gameplay-anchor" class="anchor" title="Gameplay" href="#gameplay">GAMEPLAY</a>
+            <a id="races=anchor" class="anchor" title="Races" href="#races">RACES</a>
+          </nav>
+          <div class="col-xs-2 text-right">
+            <a id="play-now" class="button" title="Play Now" href="http://tera.enmasse.com">PLAY NOW</a>
+          </div>
+        </div>
       </div>
     </header>
 
     <div id="gameplay">
       <div class="container row center-xs">
-        <div id="video" class="col-xs-4">
+        <div class="col-xs-12 col-sm-6 relative">
             <video width="100%" playsinline autoplay muted loop>
               <!-- Ideally we would put a poster here as well to fade in the play button afterwards -->
               <source src="vid/action_thumb.mp4" type="video/mp4" /></source>
               <source src="vid/action_thumb.webm" type="video/webm" /></source>
               You need an HTML 5-capable browser.
             </video>
-            <a id="youtube-callout-overlay" title="Tera Trailer" href="https://www.youtube.com/watch?time_continue=2&v=2Le_VBtChpc" target="_blank"></a>
+            <a id="youtube-callout-overlay" title="Tera Trailer" href="https://www.youtube.com/watch?time_continue=2&v=2Le_VBtChpc" target="_blank"><div class="sprite"></div></a>
         </div>
-        <h3>True Action Combat</h3>
-        <p>
+      </div>
+      <div class="container row center-xs">
+        <div class="col-xs-12 col-sm-6 relative">
+          <h3 class="headline">
+            <span class="headline-box-shadow">True Action Combat</span><span class="font-gradient">True Action Combat</span>
+          </h3>
+        </div>
+      </div>
+      <div class="container row center-xs">
+        <p class="col-xs-12 col-sm-6">
             In <i>TERA</i>, you aim, dodge, and time your attacks for an intense and rewarding tactical combat experience. 
             <i>TERA</i>'s expansive content is totally free to play, from character creation all the way to level 70 and beyond.
         </p>
       </div>
+      <div id="divider"><img src="images/divider.png" alt="Tera" /></div>
     </div>
 
     <div id="races">
-      <div id="divider"></div>
-      <div class="container tighten">
-        <h1 id="races-title" class="col-xs col-xs-offset-1">Races</h1>
+      
+      <div class="container tighten row">
+        <div id="races-title" class="col-xs col-xs-offset-1">
+          <div class="relative">
+            <h1 class="headline">
+              <span class="headline-box-shadow">Races</span><span class="font-gradient">Races</span>
+            </h1>
+          </div>
+        </div>
         <div id="races-content col-xs-12 col-sm-10 col-sm-offset-1">
           <div id="races-banner"></div>
-          <div class="races-individual row center-xs">
-            <div id="race-aman">
+          <div class="races-individual">
+            <div id="race-aman" class="row center-xs">
               <div class="col-xs-12 col-sm-5 race-avatar">
                 <img src="images/optimized/races/aman.png" alt="Aman" />
               </div>
@@ -63,7 +88,7 @@
                 <p>Amani are always the loudest voices in defense of freedom—either their own, or someone else’s—and once given, will never go back on their word.</p>
               </div>
             </div>
-            <div id="race-baraka">
+            <div id="race-baraka" class="row center-xs">
               <div class="col-xs-12 col-sm-5 race-avatar">
                 <img src="images/optimized/races/baraka.png" alt="Baraka" />
               </div>
@@ -72,7 +97,7 @@
                 <p>A peaceful and noble race, barakas are nonetheless ferocious in defense of the weak.</p>
               </div>
             </div>
-            <div id="race-castanic">
+            <div id="race-castanic" class="row center-xs">
               <div class="col-xs-12 col-sm-5 race-avatar">
                 <img src="images/optimized/races/castanic.png" alt="Castanic" />
               </div>
@@ -81,7 +106,7 @@
                 <p>Known for their dark, wry humor and bold manner, castanics refuse to be chained to their dark past, and strive each day to forge a new future.</p>
               </div>
             </div>
-            <div id="race-elin">
+            <div id="race-elin" class="row center-xs">
               <div class="col-xs-12 col-sm-5 race-avatar">
                 <img src="images/optimized/races/elin.png" alt="Elin" />
               </div>
@@ -90,7 +115,7 @@
                 <p>Never aging, the wise and battleworn elins still appear as vulnerable and innocent as their goddess was in the moment of their creation.</p>
               </div>
             </div>
-            <div id="race-high-elf">
+            <div id="race-high-elf" class="row center-xs">
               <div class="col-xs-12 col-sm-5 race-avatar">
                 <img src="images/optimized/races/high-elf.png" alt="High Elf" />
               </div>
@@ -99,7 +124,7 @@
                 <p>The high elves' historical and magical knowledge make them the caretakers of culture for the entire world.</p>
               </div>
             </div>
-            <div id="race-human">
+            <div id="race-human" class="row center-xs">
               <div class="col-xs-12 col-sm-5 race-avatar">
                 <img src="images/optimized/races/human.png" alt="Human" />
               </div>
@@ -108,7 +133,7 @@
                 <p>Cursed by their creator to wander without a homeland, humans turned adversity to advantage during their long exile by studying the culture and crafts of other races.</p>
               </div>
             </div>
-            <div id="race-popori">
+            <div id="race-popori" class="row center-xs">
               <div class="col-xs-12 col-sm-5 race-avatar">
                 <img src="images/optimized/races/popori.png" alt="Popori" />
               </div>
@@ -119,7 +144,7 @@
             </div>
 
           </div>
-          <div id="race-icons" class="row xs-center">
+          <div id="race-icons" class="row center-xs">
             <a class="icon">
               <div class="sprite aman"></div>
               <h6>Aman</h6>

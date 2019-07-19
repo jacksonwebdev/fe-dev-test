@@ -42,8 +42,22 @@ Race icon button (#fab83c or rgb(250,184,60))
 // thanks for providing the colors
 
 // here are some foundational elements:
-@import 'vendor/reset.css';
 @import 'vendor/flexboxgrid.min.css';
+
+// bring in your fonts:
+@import '_global';
 
 // here are some mixins
 @import 'mixins/_font';
+
+// start of main scss
+@import 'about/_structural';
+@import 'about/_font';
+@import 'about/_spritesheet';
+@import 'about/_button';
+
+// css by row
+@import 'about/_secondary_nav';
+@import 'about/_primary_nav';
+@import 'about/_gameplay';
+@import 'about/_races';

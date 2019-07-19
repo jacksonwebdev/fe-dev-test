@@ -1,0 +1,27 @@
+#primary-nav {
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ffffff 0%, #ececec 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #ffffff 0%,#ececec 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #ffffff 0%,#ececec 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ececec',GradientType=0 ); /* IE6-9 */
+    border-bottom: 1px solid #183561;
+
+    #tera {
+        padding-top: 4px;
+        max-width: 130px;
+    }
+
+    nav {
+        a {
+            font-family: "Montserrat";
+            font-weight: bold;
+            @include font-size(16);
+            margin-right: 32px;
+            margin-right: 2rem;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+}
