@@ -52,6 +52,16 @@ module.exports = {
                 test: /\.(scss$)/,
                 use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
             },
+            {
+                test: /\.(mp4|webm)$/,
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]',
+                        outputPath: 'vid'
+                    }
+                }]
+            }
         ]
     },
     plugins: [
