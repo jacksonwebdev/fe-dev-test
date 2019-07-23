@@ -1,11 +1,181 @@
 #races {
-    overflow: visible;
-    padding: 48px 0 0;
-    padding: 3rem 0 0;
+    overflow: hidden;
+    padding: 48px 0 32px;
+    padding: 3rem 0 2rem;
     background: url('./background_races.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+
+    #races-title {
+        text-align: left;
+    }
     
+    #races-content {
+        margin: 32px 0 48px;
+        margin: 2rem 0 3rem;
+        width: 100%;
+    }
+
+    #races-banner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        -webkit-transform: translate(0, -50%);
+        -moz-transform: translate(0, -50%);
+        transform: translate(0, -50%);
+        background: rgb(240,228,210); /* Old browsers */
+        background: -moz-linear-gradient(left,  rgba(240,228,210,1) 2%, rgba(250,184,60,1) 20%, rgba(250,184,60,1) 80%, rgba(240,228,210,1) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(left,  rgba(240,228,210,1) 2%,rgba(250,184,60,1) 20%,rgba(250,184,60,1) 80%,rgba(240,228,210,1) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to right,  rgba(240,228,210,1) 2%,rgba(250,184,60,1) 20%,rgba(250,184,60,1) 80%,rgba(240,228,210,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0e4d2', endColorstr='#f0e4d2',GradientType=1 ); /* IE6-9 */
+        padding: 6.5rem 0;
+        z-index: 1;
+        // set banner to behind content
+        &+.relative {
+            z-index: 2;
+        }
+    }
+
+    #races-individual {
+        
+        div[id^="race-"] {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            visibility: hidden;
+            opacity: 0;
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            img {
+                width: 80%;
+                height: auto;
+                opacity: 0;
+            }
+
+            &.active {
+                z-index: 2;
+                visibility: visible;
+                position: relative;
+                opacity: 1;
+                img {
+                    -webkit-animation-duration: 1s;
+                    animation-duration: 1s;
+                    -webkit-animation-fill-mode: both;
+                    animation-fill-mode: both;
+                    -webkit-animation-name: fadeInLeft;
+                    animation-name: fadeInLeft;
+                }
+            }
+        }
+
+        .race-content {
+            @include font-size(21);
+            line-height: 25px;
+        }
+
+    }
+
+    #race-icons {
+        .icon {
+            display: inline-block;
+            margin-right: 20px;
+            margin-right: 1.5rem;
+
+            &:last-child {
+                margin-right: 0;
+            }
+            h6 {
+                font-family: "Montserrat";
+                text-transform: uppercase;
+                margin: 4px 0 0;
+                margin: 0.25rem 0 0;
+            }
+        }
+        .skew {
+            z-index: 1;
+            -webkit-transform:skew(-10deg);
+            transform:skew(-10deg);
+            width: 75px;
+            height: 75px;
+            border: 2px solid #fab83c;
+            border-radius: 5px;
+            background-color: rgb(248, 211, 160);
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+        }
+        .sprite {
+            z-index: 2;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 75px;
+            height: 80px;
+            &.aman {
+                background-position: 1px 2px;
+            }
+            &.baraka {
+                background-position: -77px 2px;
+            }
+            &.castanic {
+                background-position: -153px 3px;
+            }
+            &.elin {
+                background-position: 1px -76px;
+            }
+            &.high-elf {
+                background-position: -140px -75px;
+            }
+            &.human {
+                background-position: 1px -152px;
+            }
+            &.popori {
+                background-position: -218px -109px;
+            }
+        }
+
+        a {
+            position: relative;
+            top: 0;
+            display: inline-block;
+            &:hover, &:active {
+                top: -5px;
+
+                .skew {
+                    -webkit-box-shadow: 0px 0px 14px 1px rgba(51,51,51,1);
+                    -moz-box-shadow: 0px 0px 14px 1px rgba(51,51,51,1);
+                    box-shadow: 0px 0px 14px 1px rgba(51,51,51,1);
+                }
+
+                .aman + .skew {
+                    border-color: rgb( 70, 72, 82 );
+                }
+                .baraka + .skew {
+                    border-color: rgb( 130, 155, 117 );
+                }
+                .castanic + .skew {
+                    border-color: rgb( 171, 135, 154 );
+                }
+                .elin + .skew {
+                    border-color: rgb( 255, 183, 78 );
+                }
+                .high-elf + .skew {
+                    border-color: rgb( 216, 181, 174 );
+                }
+                .human + .skew {
+                    border-color: rgb( 47, 72, 109 );
+                }
+                .popori + .skew {
+                    border-color: rgb( 239, 220, 223 );
+                }                
+
+            }
+        }
+    }
+
 
 }

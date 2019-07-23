@@ -50,6 +50,9 @@ Race icon button (#fab83c or rgb(250,184,60))
 // here are some mixins
 @import 'mixins/_font';
 
+// animation
+@import 'about/_animation';
+
 // start of main scss
 @import 'about/_structural';
 @import 'about/_font';
@@ -61,3 +64,4 @@ Race icon button (#fab83c or rgb(250,184,60))
 @import 'about/_primary_nav';
 @import 'about/_gameplay';
 @import 'about/_races';
+@import 'about/_copyright';

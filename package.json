@@ -12,7 +12,8 @@
   "author": "Mark Geller",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "jquery": "^3.4.1"
   },
   "devDependencies": {
     "@babel/core": "^7.5.4",

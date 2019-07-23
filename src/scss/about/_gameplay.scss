@@ -6,6 +6,7 @@
     background-size: cover;
     background-position: center center;
     overflow: visible;
+    position: relative;
 
     .headline {
         margin-top: 0;
@@ -28,6 +29,18 @@
         margin-bottom: 1.5rem;
         border: 3px solid #00c7fa;
         border-radius: 3px;
+    }
+    #video-container {
+        &:hover, &:active {
+            video {
+                -webkit-animation-duration: 0.5s;
+                animation-duration: 0.5s;
+                -webkit-animation-fill-mode: both;
+                animation-fill-mode: both;
+                -webkit-animation-name: border-pulsate;
+                animation-name: border-pulsate;
+            }
+        }
     }
 
     #youtube-callout-overlay {
@@ -63,7 +76,7 @@
         position: absolute;
         // push below so text is still able to be highlighted
         z-index: 1;
-        bottom: -49px;
+        bottom: -34px;
         left: 50%;
         -webkit-transform: translate(-50%, 0);
         -moz-transform: translate(-50%, 0);

@@ -25,3 +25,14 @@
     }
 
 }
+
+#wrapper.sticky {
+    padding-top: 100px;
+    
+    #primary-nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 10;
+    }
+}

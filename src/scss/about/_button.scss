@@ -9,5 +9,9 @@
     font-weight: bold;
     color: #fff;
     text-align: center;
-    padding: 0.5rem 1rem;
+    padding: 8px 22px;
+    padding: 0.5rem 1.65rem;
+    &:hover, &:active {
+        background: #00c7fa;
+    }
 }
